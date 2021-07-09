@@ -1,3 +1,26 @@
+//  
+//      @@@@@    @@@@@@@@@@ 
+//     @     @   @        @  
+//    @ @@@@@ @  @@@@  @@@@  
+//   @  @   @ @     @  @        
+//   @  @   @ @     @  @      @@@@@@@@   @@@@@@@@@@  @@@@@@@@@@  @@@@   @@@@   
+//   @  @@@@@ @     @  @     @        @  @        @  @        @  @  @   @  @  
+//   @  @   @ @     @  @     @  @@@@@@@  @  @@@@  @  @@@@  @@@@  @  @@  @  @  
+//   @  @   @ @     @  @     @  @        @  @  @  @     @  @     @  @ @ @  @     
+//   @  @   @ @  @@@@  @@@@  @  @@@@@@@  @  @@@@  @  @@@@  @@@@  @  @  @@  @    
+//   @  @   @ @  @        @  @        @  @        @  @        @  @  @   @  @    
+//   @@@@   @@@  @@@@@@@@@@   @@@@@@@@   @@@@@@@@@@  @@@@@@@@@@  @@@@   @@@@    
+// 
+// Welcome To AiCoin Platform
+// 10% Tax (5% Burn // 5% back to Holders)
+// LuckyAiCoin website: https://aitoken.shop
+// LuckyAiCoin Telegram channel: https://t.me/AiCoinV1
+// LuckyAiCoin Telegram Group: https://t.me/AiCoinV2
+// LuckyAiCoin Instagram: https://www.instagram.com/aicoinhq
+// LuckyAiCoin YouTube: https://www.youtube.com/c/LuckyAiCoin
+// LuckyAiCoin Reddit:  https://www.reddit.com/r/AiCoins
+// LuckyAiCoin Twitter: https://twitter.com/AiCoinHQ
+
 pragma solidity ^0.6.12;
 // SPDX-License-Identifier: Unlicensed
 interface IERC20 {
@@ -417,13 +440,13 @@ contract AiCoin is Context, IERC20, Ownable {
     address[] private _excluded;
    
     uint256 private constant MAX = ~uint256(0);
-    uint256 private _tTotal = 1000000000 * 10**3 * 10**18;
+    uint256 private _tTotal = 1000000000 * 10**6 * 10**9;
     uint256 private _rTotal = (MAX - (MAX % _tTotal));
     uint256 private _tFeeTotal;
 
-    string private _name = "AiCoin";
-    string private _symbol = "AICOIN";
-    uint8 private _decimals = 18;
+    string private _name = "AI COIN";
+    string private _symbol = "AIC";
+    uint8 private _decimals = 9;
     
     uint256 public _taxFee = 5;
     uint256 private _previousTaxFee = _taxFee;
@@ -437,8 +460,8 @@ contract AiCoin is Context, IERC20, Ownable {
     bool inSwapAndLiquify;
     bool public swapAndLiquifyEnabled = true;
     
-    uint256 public _maxTxAmount = 50000000 * 10**3 * 10**18;
-    uint256 private numTokensSellToAddToLiquidity = 50000 * 10**3 * 10**18;
+    uint256 public _maxTxAmount = 5000000 * 10**6 * 10**9;
+    uint256 private numTokensSellToAddToLiquidity = 500000 * 10**6 * 10**9;
     
     event MinTokensBeforeSwapUpdated(uint256 minTokensBeforeSwap);
     event SwapAndLiquifyEnabledUpdated(bool enabled);
